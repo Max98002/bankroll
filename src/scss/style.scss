@@ -17,4 +17,12 @@ ul {
 	list-style: none;
 }
 
+.box {
+	display: flex;
+	align-items: center;
+	> span {
+		margin-right: 10px;
+	}
+}
+
 @import 'allstyle';

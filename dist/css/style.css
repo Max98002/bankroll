@@ -509,6 +509,14 @@ ul {
   list-style: none;
 }
 
+.box {
+  display: flex;
+  align-items: center;
+}
+.box > span {
+  margin-right: 10px;
+}
+
 .dropdown {
   position: relative;
   width: 24px;
@@ -520,12 +528,6 @@ ul {
 }
 .dropdown-input {
   display: none;
-}
-.dropdown-input:checked ~ .dropdown-menu {
-  display: block;
-}
-.dropdown-input:checked ~ .dropdown-btn {
-  background: #404453;
 }
 .dropdown-btn {
   display: grid;
@@ -541,7 +543,7 @@ ul {
   border-radius: 4px;
   transition: background 0.2s;
 }
-.dropdown-btn span {
+.dropdown-btn__circle {
   border-radius: 100%;
   background-color: #fff;
 }

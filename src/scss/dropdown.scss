@@ -11,13 +11,13 @@
   &-input {
     display: none;
 
-    &:checked~.dropdown-menu {
-      display: block;
-    }
+    // &:checked~.dropdown-menu {
+    //   display: block;
+    // }
 
-    &:checked~.dropdown-btn {
-      background: #404453;
-    }
+    // &:checked~.dropdown-btn {
+    //   background: #404453;
+    // }
   }
 
   &-btn {
@@ -34,7 +34,7 @@
     border-radius: 4px;
     transition: background 0.2s;
 
-    span {
+    &__circle {
       border-radius: 100%;
       background-color: #fff;
     }
