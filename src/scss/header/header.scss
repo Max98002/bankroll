@@ -1,0 +1,94 @@
+.header {
+  padding: 25px 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(#12131A, 0.1);
+  backdrop-filter: blur(10px);
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+
+    img,
+    picture {
+      @include imgSet;
+    }
+  }
+
+  &-info-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-info {
+      margin-right: 16px;
+    }
+
+    &-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__btn {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        background: #1B1D26;
+        border-radius: 8px;
+        transition: background 0.2s;
+
+        &:hover {
+          background: #404453;
+
+          svg {
+            path {
+              fill: #ffffff;
+            }
+          }
+        }
+
+        &:first-child {
+          margin-right: 8px;
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        &_active {
+          svg {
+            path {
+              fill: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-info-profiles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__wrapper {
+      position: relative;
+    }
+  }
+}

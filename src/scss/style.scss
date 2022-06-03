@@ -2,6 +2,7 @@
 @import 'bootstrap-reboot';
 
 body {
+	padding-top: 90px;
 	font-family: 'Manrope';
 	font-style: normal;
 	font-weight: 500;
@@ -17,12 +18,19 @@ ul {
 	list-style: none;
 }
 
-.box {
-	display: flex;
-	align-items: center;
-	> span {
-		margin-right: 10px;
-	}
+button {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: none;
 }
+
+@mixin imgSet {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@import 'interfaces';
 
 @import 'allstyle';

@@ -1,0 +1,40 @@
+.button {
+  &-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 103px;
+    padding: 8px 0;
+    padding-right: 16px;
+    padding-left: 8px;
+    background: #1B1D26;
+    border-radius: 8px;
+
+    &-icon {
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+      margin-right: auto;
+      img, picture {
+        @include imgSet;
+      }
+      &_disconnected {
+        padding: 5px;
+        background: #D86E4C;
+      }
+      &_connected {
+        padding: 5px;
+        background: #4461E0;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 19px;
+      text-align: right;
+      color: #E5E5E5;
+    }
+  }
+}

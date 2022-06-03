@@ -1,0 +1,128 @@
+.profile {
+  &-drop {
+    &-block {
+      position: absolute;
+      top: 101%;
+      right: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      width: 240px;
+      padding-top: 8px;
+      padding-bottom: 16px;
+      background: #404453;
+      box-shadow: 0px 10px 20px rgba(17, 20, 33, 0.3);
+      border-radius: 8px;
+
+      &_bottom {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+
+      &__row {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 12px;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__text {
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+
+        &_mailto {
+          color: inherit;
+          text-decoration: none;
+
+          &:hover {
+            color: darken($color: #fff, $amount: 10%);
+          }
+        }
+      }
+
+      &-info-window {
+        padding: 0 12px;
+        padding-bottom: 12px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #12131A;
+
+        &-social {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-flow: row nowrap;
+          margin-bottom: 12px;
+
+          &__name {
+            font-size: 12px;
+            line-height: 16px;
+            color: #9FA6C2;
+            &_disconnect {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &-user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          &__name {
+            font-size: 14px;
+            line-height: 16px;
+            color: #FFFFFF;
+          }
+
+          &__tag {
+            padding: 2px 4px;
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border-radius: 2px;
+            &_disconnected {
+              background: #D35933;
+            }
+            &_connected {
+              background-color: #3C56D9;
+            }
+          }
+        }
+      }
+    }
+
+    &-icon-arrow {
+      display: grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+
+      svg {
+        path {
+          fill: #E5E5E5;
+        }
+      }
+    }
+  }
+}
+
+[data-drop-menu] {
+  display: none;
+}
+
+.show-menu {
+  display: flex;
+}

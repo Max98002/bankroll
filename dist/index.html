@@ -9,94 +9,177 @@
 </head>
 
 <body>
-	
-	<main>
-
-		<div class="dropdown">
-  <label for="dropdown" class="dropdown-label">
-    <input type="checkbox" id="dropdown" class="dropdown-input">
-    <div class="dropdown-btn">
-      <span class="dropdown-btn__circle"></span>
-      <span class="dropdown-btn__circle"></span>
-      <span class="dropdown-btn__circle"></span>
-      <span class="dropdown-btn__circle"></span>
-      <span class="dropdown-btn__circle"></span>
-      <span class="dropdown-btn__circle"></span>
+	<header class="header">
+  <div class="header-wrapper">
+    <div class="header-info-left">
+      <div class="header-logo">
+        <img src="./img/icons/icons.svg#logo" class="svg-logo-dims" alt="logo" />
+      </div>
+      <div class="header-date">
+        <div class="header-date-info">
+          <span class="header-data-info-style-text header-date-info-month">May,</span>
+          <span class="header-data-info-style-text header-date-info-year">2022</span>
+        </div>
+        <div class="header-date-btns">
+          <button class="header-date-btns__btn header-date-btns__btn_active">
+            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.61485 5.28127L1.28575 9.88329C1.22146 9.93894 1.1395 9.97688 1.05024 9.99229C0.960979 10.0077 0.868429 9.9999 0.784304 9.96987C0.700179 9.93984 0.628261 9.88894 0.577652 9.8236C0.527043 9.75826 0.500019 9.68142 0.5 9.60281L0.5 0.397189C0.500019 0.318581 0.527043 0.241742 0.577652 0.176402C0.628261 0.111062 0.700179 0.0601568 0.784304 0.0301285C0.868429 9.91821e-05 0.960979 -0.00770187 1.05024 0.00771141C1.1395 0.0231247 1.22146 0.061059 1.28575 0.116714L6.61485 4.71873C6.65769 4.75563 6.69168 4.79947 6.71487 4.84774C6.73806 4.896 6.75 4.94774 6.75 5C6.75 5.05226 6.73806 5.104 6.71487 5.15226C6.69168 5.20053 6.65769 5.24437 6.61485 5.28127Z"
+                fill="#3F4352" />
+            </svg>
+          </button>
+          <button class="header-date-btns__btn">
+            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.61485 5.28127L1.28575 9.88329C1.22146 9.93894 1.1395 9.97688 1.05024 9.99229C0.960979 10.0077 0.868429 9.9999 0.784304 9.96987C0.700179 9.93984 0.628261 9.88894 0.577652 9.8236C0.527043 9.75826 0.500019 9.68142 0.5 9.60281L0.5 0.397189C0.500019 0.318581 0.527043 0.241742 0.577652 0.176402C0.628261 0.111062 0.700179 0.0601568 0.784304 0.0301285C0.868429 9.91821e-05 0.960979 -0.00770187 1.05024 0.00771141C1.1395 0.0231247 1.22146 0.061059 1.28575 0.116714L6.61485 4.71873C6.65769 4.75563 6.69168 4.79947 6.71487 4.84774C6.73806 4.896 6.75 4.94774 6.75 5C6.75 5.05226 6.73806 5.104 6.71487 5.15226C6.69168 5.20053 6.65769 5.24437 6.61485 5.28127Z"
+                fill="#3F4352" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-    <ul class="dropdown-menu">
-      <li class="dropdown-menu__item" id="change">
-        <span class="dropdown-menu__text">Change currency</span>
-        <div class="dropdown-menu__arrow">
-          <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M6.61485 5.28127L1.28575 9.88329C1.22146 9.93894 1.1395 9.97688 1.05024 9.99229C0.960979 10.0077 0.868428 9.9999 0.784303 9.96987C0.700178 9.93984 0.628261 9.88894 0.577652 9.8236C0.527043 9.75826 0.500019 9.68142 0.5 9.60281L0.5 0.397189C0.500019 0.31858 0.527043 0.241742 0.577652 0.176402C0.628261 0.111062 0.700178 0.060157 0.784303 0.0301283C0.868428 9.95889e-05 0.960979 -0.00770168 1.05024 0.00771132C1.1395 0.0231243 1.22146 0.0610585 1.28575 0.116714L6.61485 4.71873C6.65769 4.75563 6.69168 4.79947 6.71487 4.84774C6.73806 4.896 6.75 4.94774 6.75 5C6.75 5.05226 6.73806 5.104 6.71487 5.15226C6.69168 5.20053 6.65769 5.24437 6.61485 5.28127Z"
-              fill="#8B8FA5" />
-          </svg>
+    <div class="header-info-profiles">
+      <div class="header-info-profiles__wrapper">
+        <button class="button-profile button-profile_user">
+          <div class="button-profile-icon">
+            <img src="./img/icons/icons.svg#profile-user" class="svg-profile-user-dims" alt="profile-user" />
+          </div>
+          <span class="button-profile__text">Profile</span>
+        </button>
+        <div data-drop-menu class="profile-drop-block normal-menu">
+          <div class="profile-drop-block_bottom">
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Fake numbers</h4>
+              <label class="profile-drop__switch switch" for="normal-profile">
+                <input type="checkbox" id="normal-profile" />
+                <div class="switch__slider"></div>
+              </label>
+            </div>
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Total-section currency</h4>
+              <div class="profile-drop-icon-arrow">
+                <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.61485 5.28127L1.28575 9.88329C1.22146 9.93894 1.1395 9.97688 1.05024 9.99229C0.960979 10.0077 0.868429 9.9999 0.784304 9.96987C0.700179 9.93984 0.628261 9.88894 0.577652 9.8236C0.527043 9.75826 0.500019 9.68142 0.5 9.60281L0.5 0.397189C0.500019 0.318581 0.527043 0.241742 0.577652 0.176402C0.628261 0.111062 0.700179 0.0601568 0.784304 0.0301285C0.868429 9.91821e-05 0.960979 -0.00770187 1.05024 0.00771141C1.1395 0.0231247 1.22146 0.061059 1.28575 0.116714L6.61485 4.71873C6.65769 4.75563 6.69168 4.79947 6.71487 4.84774C6.73806 4.896 6.75 4.94774 6.75 5C6.75 5.05226 6.73806 5.104 6.71487 5.15226C6.69168 5.20053 6.65769 5.24437 6.61485 5.28127Z"
+                    fill="#3F4352" />
+                </svg>
+              </div>
+            </div>
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Log out</h4>
+            </div>
+            <div class="profile-drop-block__row">
+              <p class="profile-drop-block__text">
+                Do you have any suggestions or do you find a bug? Write here
+                <a class="profile-drop-block__text_mailto" href="mailto:bodyakrol@gmail.com">bodyakrol@gmail.com</a>
+              </p>
+            </div>
+          </div>
         </div>
-        <ul class="dropdown-menu-change">
-          <li class="dropdown-menu-change__item">
-            <span class="dropdown-menu__text dropdown-menu__text_icon">$</span>
-            <span class="dropdown-menu__text dropdown-menu-change__text">USD</span>
-            <div class="dropdown-menu-change__check">
-              <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.5057 9C4.38374 9.00012 4.26296 8.97723 4.1503 8.93263C4.03764 8.88803 3.93531 8.82262 3.8492 8.74014L0.283482 5.33444C0.194794 5.25263 0.124053 5.15477 0.0753878 5.04656C0.0267223 4.93835 0.00110646 4.82198 3.50601e-05 4.70421C-0.00103634 4.58645 0.0224579 4.46967 0.0691473 4.36067C0.115837 4.25167 0.184786 4.15265 0.271972 4.06938C0.359158 3.9861 0.462835 3.92025 0.576953 3.87565C0.691071 3.83106 0.813345 3.80862 0.93664 3.80964C1.05994 3.81067 1.18178 3.83513 1.29507 3.88161C1.40836 3.92809 1.51082 3.99566 1.59648 4.08037L4.5057 6.85902L11.4263 0.248963C11.6015 0.0874072 11.836 -0.0019872 12.0795 3.35271e-05C12.323 0.00205426 12.5559 0.0953287 12.728 0.259767C12.9002 0.424205 12.9978 0.646651 13 0.879193C13.0021 1.11173 12.9085 1.33577 12.7393 1.50304L5.1622 8.74014C5.07608 8.82262 4.97375 8.88803 4.86109 8.93263C4.74843 8.97723 4.62765 9.00012 4.5057 9Z"
-                  fill="#E5E5E5" />
-              </svg>
+      </div>
+      <div class="header-info-profiles__wrapper">
+        <button class="button-profile button-profile_disconnected">
+          <div class="button-profile-icon button-profile-icon_disconnected">
+            <img src="./img/icons/icons.svg#profile-arrow" class="svg-profile-user-dims" alt="profile-user" />
+          </div>
+          <span class="button-profile__text">Profile</span>
+        </button>
+        <div data-drop-menu class="profile-drop-block disconnected-menu">
+          <div class="profile-drop-block-info-window">
+            <div class="profile-drop-block-info-window-social">
+              <span class="profile-drop-block-info-window-social__name">Telegram</span>
             </div>
-          </li>
-          <li class="dropdown-menu-change__item">
-            <span class="dropdown-menu__text dropdown-menu__text_icon">€</span>
-            <span class="dropdown-menu__text dropdown-menu-change__text">EUR</span>
-            <div class="dropdown-menu-change__check">
-              <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.5057 9C4.38374 9.00012 4.26296 8.97723 4.1503 8.93263C4.03764 8.88803 3.93531 8.82262 3.8492 8.74014L0.283482 5.33444C0.194794 5.25263 0.124053 5.15477 0.0753878 5.04656C0.0267223 4.93835 0.00110646 4.82198 3.50601e-05 4.70421C-0.00103634 4.58645 0.0224579 4.46967 0.0691473 4.36067C0.115837 4.25167 0.184786 4.15265 0.271972 4.06938C0.359158 3.9861 0.462835 3.92025 0.576953 3.87565C0.691071 3.83106 0.813345 3.80862 0.93664 3.80964C1.05994 3.81067 1.18178 3.83513 1.29507 3.88161C1.40836 3.92809 1.51082 3.99566 1.59648 4.08037L4.5057 6.85902L11.4263 0.248963C11.6015 0.0874072 11.836 -0.0019872 12.0795 3.35271e-05C12.323 0.00205426 12.5559 0.0953287 12.728 0.259767C12.9002 0.424205 12.9978 0.646651 13 0.879193C13.0021 1.11173 12.9085 1.33577 12.7393 1.50304L5.1622 8.74014C5.07608 8.82262 4.97375 8.88803 4.86109 8.93263C4.74843 8.97723 4.62765 9.00012 4.5057 9Z"
-                  fill="#E5E5E5" />
-              </svg>
+            <div class="profile-drop-block-info-window-user">
+              <span class="profile-drop-block-info-window-user__name">Connect</span>
+              <span
+                class="profile-drop-block-info-window-user__tag profile-drop-block-info-window-user__tag_disconnected">disconnected</span>
             </div>
-          </li>
-          <li class="dropdown-menu-change__item dropdown-menu-change__item_active">
-            <span class="dropdown-menu__text dropdown-menu__text_icon">₴</span>
-            <span class="dropdown-menu__text dropdown-menu-change__text">Hryvna</span>
-            <div class="dropdown-menu-change__check">
-              <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.5057 9C4.38374 9.00012 4.26296 8.97723 4.1503 8.93263C4.03764 8.88803 3.93531 8.82262 3.8492 8.74014L0.283482 5.33444C0.194794 5.25263 0.124053 5.15477 0.0753878 5.04656C0.0267223 4.93835 0.00110646 4.82198 3.50601e-05 4.70421C-0.00103634 4.58645 0.0224579 4.46967 0.0691473 4.36067C0.115837 4.25167 0.184786 4.15265 0.271972 4.06938C0.359158 3.9861 0.462835 3.92025 0.576953 3.87565C0.691071 3.83106 0.813345 3.80862 0.93664 3.80964C1.05994 3.81067 1.18178 3.83513 1.29507 3.88161C1.40836 3.92809 1.51082 3.99566 1.59648 4.08037L4.5057 6.85902L11.4263 0.248963C11.6015 0.0874072 11.836 -0.0019872 12.0795 3.35271e-05C12.323 0.00205426 12.5559 0.0953287 12.728 0.259767C12.9002 0.424205 12.9978 0.646651 13 0.879193C13.0021 1.11173 12.9085 1.33577 12.7393 1.50304L5.1622 8.74014C5.07608 8.82262 4.97375 8.88803 4.86109 8.93263C4.74843 8.97723 4.62765 9.00012 4.5057 9Z"
-                  fill="#E5E5E5" />
-              </svg>
+          </div>
+          <div class="profile-drop-block_bottom">
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Fake numbers</h4>
+              <label class="profile-drop__switch switch" for="disconnected-profile">
+                <input type="checkbox" id="disconnected-profile" />
+                <div class="switch__slider"></div>
+              </label>
             </div>
-          </li>
-        </ul>
-      </li>
-      <li class="dropdown-menu__item" id="group">
-        <span class="dropdown-menu__text">Move to group</span>
-        <div class="dropdown-menu__arrow">
-          <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M6.61485 5.28127L1.28575 9.88329C1.22146 9.93894 1.1395 9.97688 1.05024 9.99229C0.960979 10.0077 0.868428 9.9999 0.784303 9.96987C0.700178 9.93984 0.628261 9.88894 0.577652 9.8236C0.527043 9.75826 0.500019 9.68142 0.5 9.60281L0.5 0.397189C0.500019 0.31858 0.527043 0.241742 0.577652 0.176402C0.628261 0.111062 0.700178 0.060157 0.784303 0.0301283C0.868428 9.95889e-05 0.960979 -0.00770168 1.05024 0.00771132C1.1395 0.0231243 1.22146 0.0610585 1.28575 0.116714L6.61485 4.71873C6.65769 4.75563 6.69168 4.79947 6.71487 4.84774C6.73806 4.896 6.75 4.94774 6.75 5C6.75 5.05226 6.73806 5.104 6.71487 5.15226C6.69168 5.20053 6.65769 5.24437 6.61485 5.28127Z"
-              fill="#8B8FA5" />
-          </svg>
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Total-section currency</h4>
+              <div class="profile-drop-icon-arrow">
+                <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.61485 5.28127L1.28575 9.88329C1.22146 9.93894 1.1395 9.97688 1.05024 9.99229C0.960979 10.0077 0.868429 9.9999 0.784304 9.96987C0.700179 9.93984 0.628261 9.88894 0.577652 9.8236C0.527043 9.75826 0.500019 9.68142 0.5 9.60281L0.5 0.397189C0.500019 0.318581 0.527043 0.241742 0.577652 0.176402C0.628261 0.111062 0.700179 0.0601568 0.784304 0.0301285C0.868429 9.91821e-05 0.960979 -0.00770187 1.05024 0.00771141C1.1395 0.0231247 1.22146 0.061059 1.28575 0.116714L6.61485 4.71873C6.65769 4.75563 6.69168 4.79947 6.71487 4.84774C6.73806 4.896 6.75 4.94774 6.75 5C6.75 5.05226 6.73806 5.104 6.71487 5.15226C6.69168 5.20053 6.65769 5.24437 6.61485 5.28127Z"
+                    fill="#3F4352" />
+                </svg>
+              </div>
+            </div>
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Log out</h4>
+            </div>
+            <div class="profile-drop-block__row">
+              <p class="profile-drop-block__text">
+                Do you have any suggestions or do you find a bug? Write here
+                <a class="profile-drop-block__text_mailto" href="mailto:bodyakrol@gmail.com">bodyakrol@gmail.com</a>
+              </p>
+            </div>
+          </div>
         </div>
-        <ul class="dropdown-menu-group">
-          <li class="dropdown-menu-group__item"><span class="dropdown-menu__text dropdown-menu-group__text">Create
-              new</span></li>
-          <li class="dropdown-menu-group__item"><span class="dropdown-menu__text dropdown-menu-group__text">Regular
-              spendings</span></li>
-        </ul>
-      </li>
-      <li class="dropdown-menu__item"><span class="dropdown-menu__text">Edit</span></li>
-      <li class="dropdown-menu__item"><span class="dropdown-menu__text">History...</span></li>
-      <li class="dropdown-menu__item">
-        <span class="dropdown-menu__text">History...</span>
-      </li>
-    </ul>
-  </label>
-</div>
-
+      </div>
+      <div class="header-info-profiles__wrapper">
+        <button class="button-profile button-profile_connected">
+          <div class="button-profile-icon button-profile-icon_connected">
+            <img src="./img/icons/icons.svg#profile-arrow" class="svg-profile-user-dims" alt="profile-user" />
+          </div>
+          <span class="button-profile__text">Profile</span>
+        </button>
+        <div data-drop-menu class="profile-drop-block connected-menu">
+          <div class="profile-drop-block-info-window">
+            <div class="profile-drop-block-info-window-social">
+              <span class="profile-drop-block-info-window-social__name">Telegram</span>
+              <button
+                class="profile-drop-block-info-window-social__name profile-drop-block-info-window-social__name_disconnect">Disconnect</button>
+            </div>
+            <div class="profile-drop-block-info-window-user">
+              <span class="profile-drop-block-info-window-user__name">Connect</span>
+              <span
+                class="profile-drop-block-info-window-user__tag profile-drop-block-info-window-user__tag_connected">connected</span>
+            </div>
+          </div>
+          <div class="profile-drop-block_bottom">
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Fake numbers</h4>
+              <label class="profile-drop__switch switch" for="connected-profile">
+                <input type="checkbox" id="connected-profile" />
+                <div class="switch__slider"></div>
+              </label>
+            </div>
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Total-section currency</h4>
+              <div class="profile-drop-icon-arrow">
+                <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.61485 5.28127L1.28575 9.88329C1.22146 9.93894 1.1395 9.97688 1.05024 9.99229C0.960979 10.0077 0.868429 9.9999 0.784304 9.96987C0.700179 9.93984 0.628261 9.88894 0.577652 9.8236C0.527043 9.75826 0.500019 9.68142 0.5 9.60281L0.5 0.397189C0.500019 0.318581 0.527043 0.241742 0.577652 0.176402C0.628261 0.111062 0.700179 0.0601568 0.784304 0.0301285C0.868429 9.91821e-05 0.960979 -0.00770187 1.05024 0.00771141C1.1395 0.0231247 1.22146 0.061059 1.28575 0.116714L6.61485 4.71873C6.65769 4.75563 6.69168 4.79947 6.71487 4.84774C6.73806 4.896 6.75 4.94774 6.75 5C6.75 5.05226 6.73806 5.104 6.71487 5.15226C6.69168 5.20053 6.65769 5.24437 6.61485 5.28127Z"
+                    fill="#3F4352" />
+                </svg>
+              </div>
+            </div>
+            <div class="profile-drop-block__row">
+              <h4 class="profile-drop-block__text">Log out</h4>
+            </div>
+            <div class="profile-drop-block__row">
+              <p class="profile-drop-block__text">
+                Do you have any suggestions or do you find a bug? Write here
+                <a class="profile-drop-block__text_mailto" href="mailto:bodyakrol@gmail.com">bodyakrol@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+	<main>
 	</main>
-
-	
 
 	<script src="js/app.min.js"></script>
 </body>
