@@ -1,0 +1,32 @@
+.main {
+  padding: 0 32px;
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 274px);
+    grid-template-rows: minmax(100vh, auto);
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &-col {
+    position: relative;
+    padding-top: 164px;
+    height: 100%;
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #1B1D26;
+      z-index: 11;
+    }
+    &::after {
+      left: 0;
+    }
+    &::before {
+      right: 0;
+    }
+  }
+}
