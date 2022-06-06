@@ -1,0 +1,30 @@
+.start-typing {
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+  }
+
+  &_hide {
+    pointer-events: none;
+    animation-name: hide;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

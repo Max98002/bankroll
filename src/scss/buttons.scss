@@ -1,4 +1,9 @@
 .button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+
   &-profile {
     display: flex;
     align-items: center;
@@ -17,13 +22,17 @@
       height: 24px;
       border-radius: 100%;
       margin-right: auto;
-      img, picture {
+
+      img,
+      picture {
         @include imgSet;
       }
+
       &_disconnected {
         padding: 5px;
         background: #D86E4C;
       }
+
       &_connected {
         padding: 5px;
         background: #4461E0;
@@ -35,6 +44,46 @@
       line-height: 19px;
       text-align: right;
       color: #E5E5E5;
+    }
+  }
+
+  &-welcome {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 12px;
+    transition: background-color 0.2s;
+
+    &__icon {
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      padding: 4px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+
+      img,
+      picture {
+        @include imgSet;
+      }
+    }
+
+    &__text {
+      margin-left: 12px;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 600;
+      font-feature-settings: 'pnum'on, 'lnum'on;
+      color: #101117;
+    }
+
+    &:hover {
+      background: #DFE2F4;
+      .button-welcome__icon {
+        background-color: #FFFFFF;
+      }
     }
   }
 }

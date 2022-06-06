@@ -181,45 +181,81 @@
 
 	<main>
 		<section class="main">
-			<div class="main-wrapper">
-				<div class="main-col">
-					<div class="money-block">
-						<h4 class="money-block__title">Income</h4>
-						<h3 class="money-block__count-money">
-							<span class="money-block__currency-char">$</span>
-							<span class="money-block__count-money">2,039</span>
-						</h3>
-					</div>
-				</div>
-				<div class="main-col">
-					<div class="money-block">
-						<h4 class="money-block__title">Saved</h4>
-						<h3 class="money-block__count-money">
-							<span class="money-block__currency-char">$</span>
-							<span class="money-block__count-money">590</span>
-						</h3>
-					</div>
-					<div class="money-block">
-						<h4 class="money-block__title">Spent</h4>
-						<h3 class="money-block__count-money">
-							<span class="money-block__currency-char">$</span>
-							<span class="money-block__count-money">1,039</span>
-						</h3>
-					</div>
-				</div>
-				<div class="main-col">
-					<div class="money-block">
-						<h4 class="money-block__title">Total savings</h4>
-						<h3 class="money-block__count-money">
-							<span class="money-block__currency-char">$</span>
-							<span class="money-block__count-money">10,039</span>
-						</h3>
-					</div>
-				</div>
-			</div>
-		</section>
+  <div class="main-wrapper">
+    <!-- Перша колонка -->
+    <div class="main-col">
+      <div class="money-block">
+        <h4 class="money-block__title">Income</h4>
+        <h3 class="money-block__count-money">
+          <span class="money-block__currency-char">$</span>
+          <span class="money-block__count-money">2,039</span>
+        </h3>
+      </div>
+    </div>
+
+    <!-- друга колонка -->
+    <div class="main-col">
+
+      <div class="money-block">
+        <h4 class="money-block__title">Saved</h4>
+        <h3 class="money-block__count-money">
+          <span class="money-block__currency-char">$</span>
+          <span class="money-block__count-money">590</span>
+        </h3>
+      </div>
+
+      <div class="money-block">
+        <h4 class="money-block__title">Spent</h4>
+        <h3 class="money-block__count-money">
+          <span class="money-block__currency-char">$</span>
+          <span class="money-block__count-money">1,039</span>
+        </h3>
+      </div>
+
+    </div>
+
+    <!-- Треття колонка -->
+    <div class="main-col">
+      <div class="money-block">
+        <h4 class="money-block__title">Total savings</h4>
+        <h3 class="money-block__count-money">
+          <span class="money-block__currency-char">$</span>
+          <span class="money-block__count-money">10,039</span>
+        </h3>
+      </div>
+    </div>
+
+  </div>
+</section>
 	</main>
 
+	<aside class="start-typing">
+  <h3 class="start-typing__text">Start typing in order to add assets</h3>
+</aside>
+	<aside class="welcome welcome_hide">
+  <div class="welcome-icon">
+    <img src="./img/icons/icons.svg#logo" class="svg-logo-dims" alt="logo" />
+  </div>
+  <h3 class="welcome-title">
+    Welcome to Bankroll
+  </h3>
+  <button class="button button-welcome welcome__btn">
+    <div class="button-welcome__icon">
+      <img src="./img/icons/icons.svg#google" alt="">
+    </div>
+    <span class="button-welcome__text">Login with Google</span>
+  </button>
+  <span class="welcome__version">v.001</span>
+
+  <ul class="welcome-lines">
+    <li class="welcome-lines__line"></li>
+    <li class="welcome-lines__line"></li>
+    <li class="welcome-lines__line"></li>
+    <li class="welcome-lines__line"></li>
+    <li class="welcome-lines__line"></li>
+    <li class="welcome-lines__line"></li>
+  </ul>
+</aside>
 	<script src="js/app.min.js"></script>
 </body>
 
