@@ -81,9 +81,20 @@
 
     &:hover {
       background: #DFE2F4;
+
       .button-welcome__icon {
         background-color: #FFFFFF;
       }
     }
+  }
+
+  &-filling {
+    padding: 4px 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    border-radius: 4px;
+    background: #1B1D26;
+    color: #FFFFFF;
   }
 }

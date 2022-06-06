@@ -1,0 +1,140 @@
+.filling {
+  position: relative;
+
+  &-header {
+    display: flex;
+    align-items: center;
+
+    &__btn {
+      transition: background-color 0.2s;
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+
+      &:hover {
+        background: #292C38;
+      }
+
+      &_active {
+        background-color: #415FE4;
+
+        &:hover {
+          background: #415FE4;
+
+        }
+      }
+    }
+  }
+
+  &-input-info {
+    position: absolute;
+    top: 37px;
+    left: 0;
+    width: 600px;
+    height: 56px;
+  }
+
+  &-numbers {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    display: none;
+    &__currency-select {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+
+    &-show {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 45px;
+      height: 27px;
+      border-radius: 8px;
+      padding-left: 8px;
+      transition: background-color 0.2s;
+
+      &__char {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 4px;
+      }
+
+      &__icon {
+        display: grid;
+        place-items: center;
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background: #1D1F27;
+        cursor: pointer;
+
+        .filling-numbers-show__icon svg path {
+          fill: #fff;
+        }
+      }
+    }
+
+    &-block {
+      position: absolute;
+      display: none;
+      flex-flow: column;
+      top: 30px;
+      left: 0;
+      padding: 8px 0;
+      width: 171px;
+      background: #404453;
+      border: 1px solid #12131A;
+      box-shadow: 0px 10px 20px rgba(17, 20, 33, 0.3);
+      border-radius: 8px;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 4px 12px;
+        transition: background-color 0.2s;
+
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
+
+        &:hover {
+          background: #4461E0;
+        }
+      }
+
+      &__char {
+        margin-right: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &__name {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+      }
+
+      &__check {
+        display: grid;
+        place-items: center;
+        margin-left: auto;
+        width: 20px;
+        height: 20px;
+      }
+
+      &_active {
+        display: flex;
+      }
+    }
+  }
+}
