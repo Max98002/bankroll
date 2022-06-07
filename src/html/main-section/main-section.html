@@ -2,45 +2,18 @@
   <div class="main-wrapper">
     <!-- Перша колонка -->
     <div class="main-col">
-      <div class="money-block">
-        <h4 class="money-block__title">Income</h4>
-        <h3 class="money-block__count-money">
-          <span class="money-block__currency-char">$</span>
-          <span class="money-block__count-money">2,039</span>
-        </h3>
-      </div>
+      @@include('./money-block/money-block.html', {"name": "Income", "sum": "2,030"})
     </div>
 
     <!-- друга колонка -->
     <div class="main-col">
-
-      <div class="money-block">
-        <h4 class="money-block__title">Saved</h4>
-        <h3 class="money-block__count-money">
-          <span class="money-block__currency-char">$</span>
-          <span class="money-block__count-money">590</span>
-        </h3>
-      </div>
-
-      <div class="money-block">
-        <h4 class="money-block__title">Spent</h4>
-        <h3 class="money-block__count-money">
-          <span class="money-block__currency-char">$</span>
-          <span class="money-block__count-money">1,039</span>
-        </h3>
-      </div>
-
+      @@include('./money-block/money-block.html', {"name": "Saved", "sum": "517"})
+      @@include('./money-block/money-block.html', {"name": "Spent", "sum": "1,513"})
     </div>
 
     <!-- Треття колонка -->
     <div class="main-col">
-      <div class="money-block">
-        <h4 class="money-block__title">Total savings</h4>
-        <h3 class="money-block__count-money">
-          <span class="money-block__currency-char">$</span>
-          <span class="money-block__count-money">10,039</span>
-        </h3>
-      </div>
+      @@include('./money-block/money-block.html', {"name": "Total savings", "sum": "10,030"})
     </div>
 
   </div>

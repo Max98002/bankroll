@@ -1,4 +1,5 @@
 .money-block {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -7,8 +8,17 @@
   min-height: 97px;
   padding-left: 24px;
   padding-right: 24px;
+
   &:not(:last-child) {
     margin-bottom: 1px;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .money-block-folder {
+      transform: translateY(-50%) scale(1);
+    }
   }
 
   &__title {
@@ -25,5 +35,59 @@
     line-height: 33px;
     font-feature-settings: 'pnum'on, 'lnum'on;
     color: #FFFFFF;
+  }
+
+  &-folder {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    border-radius: 4px;
+    transform: translateY(-50%) scale(0);
+    transition: all 0.2s;
+
+    &:hover {
+      background: #292C38;
+      .money-block-folder__tagTitle {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__icon {
+      display: grid;
+      place-items: center;
+      padding: 6px;
+      width: 24px;
+      height: 24px;
+
+      img,
+      picture {
+        @include imgSet;
+      }
+    }
+
+    &__tagTitle {
+      position: absolute;
+      top: -34px;
+      left: 50%;
+
+      width: 93px;
+      
+      padding: 4px 8px;
+      
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      
+      background: #404453;
+      color: #FFFFFF;
+      border-radius: 4px;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.2s;
+    }
   }
 }
