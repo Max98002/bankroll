@@ -97,4 +97,49 @@
     background: #1B1D26;
     color: #FFFFFF;
   }
+
+  &-tooltip {
+    position: relative;
+    border-radius: 4px;
+
+    &:hover {
+      background: #292C38;
+      .button-tooltip-tagTitle {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &-icon {
+      display: grid;
+      place-items: center;
+      padding: 6px;
+      width: 24px;
+      height: 24px;
+
+      img,
+      picture {
+        @include imgSet;
+      }
+    }
+
+    &-tagTitle {
+      position: absolute;
+      top: -34px;
+      left: 50%;
+      padding: 4px 8px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      background: #404453;
+      color: #FFFFFF;
+      border-radius: 4px;
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.2s;
+    }
+  }
 }
