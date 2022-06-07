@@ -1,0 +1,116 @@
+.currency-selection {
+  position: relative;
+  margin-right: 8px;
+  margin-left: 16px;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 27px;
+    border-radius: 8px;
+    padding-left: 8px;
+    transition: background-color 0.2s;
+
+    &__char {
+      margin-right: 4px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+
+      svg path {
+        transition: fill 0.2s;
+      }
+    }
+
+    &:hover {
+      background: #1D1F27;
+      cursor: pointer;
+
+      .currency-selection-header__icon {
+        svg path {
+          fill: #fff;
+        }
+      }
+    }
+
+    &_active {
+      background: #404453;
+      .currency-selection-header__icon {
+        transform: rotate(180deg);
+        svg path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &-drop-menu {
+    position: absolute;
+    top: 29px;
+    left: 0;
+    display: none;
+    width: 171px;
+    padding: 8px 0;
+    background: #404453;
+    border: 1px solid #12131A;
+    box-shadow: 0px 10px 20px rgba(17, 20, 33, 0.3);
+    border-radius: 8px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 4px 12px;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background: #4461E0;
+        cursor: pointer;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      &_active {
+        background: #4461E0;
+      }
+    }
+
+    &__char,
+    &__name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__char {
+      margin-right: 8px;
+    }
+
+    &__check {
+      width: 20px;
+      height: 20px;
+      display: none;
+      place-items: center;
+      margin-left: auto;
+
+      &_active {
+        display: grid;
+      }
+    }
+
+  }
+}
+
+.show-menu {
+  display: block;
+}

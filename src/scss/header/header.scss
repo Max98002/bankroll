@@ -1,11 +1,9 @@
 .header {
   padding: 25px 32px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(#12131A, 0.1);
-  backdrop-filter: blur(10px);
   z-index: 10;
 
   &-wrapper {

@@ -1,8 +1,9 @@
 export default class ProfileDropMenu {
-  constructor(tiggersBtns, triggerMenu) {
+  constructor(tiggersBtns, triggerMenu, activeClass = '') {
     this.menu = document.querySelector(triggerMenu);
     this.btns = document.querySelectorAll(tiggersBtns);
     this.allMenu = document.querySelectorAll('[data-drop-menu]');
+    this.active = activeClass;
   }
 
   showMenu() {
@@ -11,7 +12,7 @@ export default class ProfileDropMenu {
         if (e.target) {
           e.preventDefault();
         }
-
+        btn.classList.toggle(this.active);
         this.menu.classList.toggle('show-menu');
       });
     })
