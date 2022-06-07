@@ -1386,7 +1386,7 @@ input::placeholder {
   transition: fill 0.2s;
 }
 .currency-selection-header:hover {
-  background: #1D1F27;
+  background: #292C38;
   cursor: pointer;
 }
 .currency-selection-header:hover .currency-selection-header__icon svg path {
@@ -1427,8 +1427,8 @@ input::placeholder {
 .currency-selection-drop-menu__item:not(:last-child) {
   margin-bottom: 8px;
 }
-.currency-selection-drop-menu__item_active {
-  background: #4461E0;
+.currency-selection-drop-menu__item_active .currency-selection-drop-menu__check {
+  display: grid;
 }
 .currency-selection-drop-menu__char, .currency-selection-drop-menu__name {
   font-weight: 500;
@@ -1444,9 +1444,6 @@ input::placeholder {
   display: none;
   place-items: center;
   margin-left: auto;
-}
-.currency-selection-drop-menu__check_active {
-  display: grid;
 }
 
 .show-menu {

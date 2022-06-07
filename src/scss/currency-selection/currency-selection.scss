@@ -32,7 +32,7 @@
     }
 
     &:hover {
-      background: #1D1F27;
+      background: #292C38;
       cursor: pointer;
 
       .currency-selection-header__icon {
@@ -81,7 +81,9 @@
         margin-bottom: 8px;
       }
       &_active {
-        background: #4461E0;
+        .currency-selection-drop-menu__check {
+          display: grid;
+        }
       }
     }
 
@@ -102,10 +104,6 @@
       display: none;
       place-items: center;
       margin-left: auto;
-
-      &_active {
-        display: grid;
-      }
     }
 
   }
