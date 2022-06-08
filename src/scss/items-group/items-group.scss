@@ -7,20 +7,7 @@
 
     overflow: hidden;
 
-    transition: all 0.2s;
-
-    &:hover {
-      height: auto;
-      overflow: auto;
-
-      .items-group__icon {
-        transform: rotate(90deg);
-      }
-
-      .items-group-wrapper {
-        border-bottom: 2px solid #4461E0;
-      }
-    }
+    transition: height 0.2s;
 
     &-wrapper {
       padding: 8px 0;
@@ -80,6 +67,15 @@
     }
   }
 
+  &_active {
+    height: auto;
+    overflow: auto;
+
+    .items-group__icon {
+      transform: rotate(90deg);
+    }
+  }
+
   &-dragging {
     position: absolute;
     top: 50%;
@@ -112,13 +108,28 @@
 }
 
 .item {
+  position: relative;
   padding: 16px 0;
   margin: 0 24px;
   border-bottom: 1px dashed #2E3140;
 
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    display: none;
+    height: 2px;
+    background-color: #4461E0;
+  }
+
   &:hover {
     cursor: pointer;
-    border-bottom: 2px solid #4461E0;
+
+    &::before {
+      display: block;
+    }
   }
 
   &-wrapper {
