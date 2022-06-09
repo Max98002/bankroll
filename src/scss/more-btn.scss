@@ -1,23 +1,23 @@
-.dropdown {
+.more-btn {
   position: relative;
-  width: 24px;
-  height: 24px;
+
+  display: grid;
+  place-items: center;
+
+  width: 20px;
+  height: 20px;
+
   background-color: transparent;
 
-  &-label {
-    display: inline;
-  }
+  z-index: 1;
 
-  &-input {
-    display: none;
-
-    // &:checked~.dropdown-menu {
-    //   display: block;
-    // }
-
-    // &:checked~.dropdown-btn {
-    //   background: #404453;
-    // }
+  &_active {
+    .more-btn-btn {
+      background: #404453;
+    }
+    .more-btn-btn .more-btn-btn__circle {
+      background-color: #fff;
+    }
   }
 
   &-btn {
@@ -30,18 +30,21 @@
     width: 20px;
     height: 20px;
     padding: 5px 0;
-    background: #292C38;
     border-radius: 4px;
     transition: background 0.2s;
 
     &__circle {
       border-radius: 100%;
-      background-color: #fff;
+      background: #878B9B;
     }
 
     &:hover {
       cursor: pointer;
       background: #404453;
+
+      .more-btn-btn__circle {
+        background-color: #fff;
+      }
     }
   }
 
@@ -83,6 +86,7 @@
       font-size: 14px;
       line-height: 20px;
       color: #FFFFFF;
+
       &_icon {
         margin-right: 8px;
         font-weight: 400;
@@ -115,7 +119,9 @@
         }
 
         &_active {
-          background: #4461E0;
+          .more-btn-menu-change__check {
+            display: flex;
+          }
         }
       }
 
@@ -180,18 +186,17 @@
         }
       }
     }
+
+    &_active {
+      display: block;
+    }
   }
 }
 
-.dropdown:hover .dropdown-menu {
+#change:hover .more-btn-menu-change {
   display: block;
 }
 
-#change:hover .dropdown-menu-change,
-#group:hover .dropdown-menu-group {
+#group:hover .more-btn-menu-group {
   display: block;
-}
-
-.dropdown-menu-change__item.dropdown-menu-change__item_active .dropdown-menu-change__check {
-  display: flex;
 }

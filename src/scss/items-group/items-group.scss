@@ -1,144 +1,121 @@
-.items {
-  &-group {
-    height: 32px;
+.group {
+  margin-bottom: 8px;
 
-    margin-bottom: 8px;
-    margin-top: 16px;
+  &-elements {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 24px;
 
-    overflow: hidden;
-
-    transition: height 0.2s;
-
-    &-wrapper {
-      padding: 8px 0;
-      margin: 0 24px;
-      position: relative;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: flex-start;
-
-      &:hover {
+    &:hover {
+      .group__name {
         cursor: pointer;
-
-        .items-group__name {
-          transition: color 0.2s;
-          color: #FFFFFF;
-        }
-
-        .items-group__icon svg path {
-          transition: fill 0.2s;
-          fill: #FFFFFF;
-        }
-
-        .items-dragging {
-          transform: translateY(-50%) scale(1);
-        }
+        color: #FFFFFF;
       }
-    }
 
-    &__icon {
-      display: grid;
-      place-items: center;
-      margin-right: 4px;
-      width: 16px;
-      height: 16px;
-      transition: all 0.2s;
-    }
+      .group__icon svg path {
+        fill: #FFFFFF;
+      }
 
-    &__name {
-      flex-grow: 1;
-      margin: 0;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      color: #7B7F96;
-    }
-
-    &__count-money {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      flex-grow: 0;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 16px;
-      color: #7B7F96;
+      .group__draggable {
+        transform: translateY(-50%) scale(1);
+      }
     }
   }
 
-  &_active {
-    height: auto;
-    overflow: auto;
-
-    .items-group__icon {
+  &__icon {
+    display: grid;
+    place-items: center;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    transition: all 0.2s;
+    &_active {
       transform: rotate(90deg);
     }
   }
 
-  &-dragging {
+  &__name {
+    flex-grow: 1;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7B7F96;
+  }
+
+  &__count-money {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7B7F96;
+  }
+
+  &__draggable {
     position: absolute;
     top: 50%;
-    left: -20px;
-    display: grid;
-    grid-template-columns: repeat(2, 2px);
-    grid-template-rows: 2px;
-    grid-auto-rows: 2px;
-    justify-content: center;
-    gap: 2px;
-    width: 20px;
-    height: 20px;
-    padding: 5px 0;
-    border-radius: 4px;
-
+    left: 3px;
     transform: translateY(-50%) scale(0);
-
     transition: all 0.2s;
+  }
 
-    &__circle {
-      border-radius: 100%;
-      background: #878B9B;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background: #404453;
-    }
+  &-items {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.2s;
   }
 }
 
 .item {
+  display: block;
   position: relative;
-  padding: 16px 0;
-  margin: 0 24px;
-  border-bottom: 1px dashed #2E3140;
+  padding: 16px 24px;
+  &:last-child {
+    margin-bottom: 10px;
+  }
 
   &::before {
     content: '';
     position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    display: none;
-    height: 2px;
-    background-color: #4461E0;
+    width: calc(100% - 48px);
+    bottom: 0;
+    left: 50%;
+    border-bottom: 1px dashed #2E3140;
+    transform: translateX(-50%);
   }
 
   &:hover {
     cursor: pointer;
 
-    &::before {
-      display: block;
+    .item__draggable {
+      transform: translateY(-50%) scale(1);
+    }
+
+    .item__money-count {
+      transform: translateX(-28px);
+    }
+
+    .item__plus {
+      opacity: 1;
+      transform: translate(0, -50%) scale(1);
+      pointer-events: auto;
     }
   }
 
   &-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
 
   &__title {
+    margin: 0;
     flex-grow: 1;
     font-weight: 400;
     font-size: 14px;
@@ -154,5 +131,25 @@
     line-height: 20px;
     font-feature-settings: 'pnum'on, 'lnum'on;
     color: #FFFFFF;
+    transition: all 0.2s;
+  }
+
+  &__draggable {
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%) scale(0);
+    transition: all 0.2s;
+  }
+
+  &__plus {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(30px, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+    background: #1B1D26;
+    transition: all 0.2s;
   }
 }

@@ -2,7 +2,6 @@ export default class ItemsActive {
   constructor(tiggersItems, activeClass = '') {
     this.items = document.querySelectorAll(tiggersItems);
     this.active = activeClass;
-    this.clickItems = false;
   }
 
   showItem() {
@@ -23,6 +22,7 @@ export default class ItemsActive {
           overflow: hidden;
           `;
           icon.style.cssText = `transform: rotate(0deg);`;
+
         } else {
           this.clickItems = true;
 
@@ -31,6 +31,7 @@ export default class ItemsActive {
           overflow: auto;
           `;
           icon.style.cssText = `transform: rotate(90deg);`;
+
         }
 
       });
