@@ -1,0 +1,55 @@
+.edit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px 24px;
+  background: #404453;
+  border: 2px solid #4461E0;
+
+  &-arrow {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 16px;
+    height: 16px;
+    padding: 4px;
+    transform: rotate(90deg);
+  }
+
+  &-enter {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 20px;
+    background: #292C38;
+    border-radius: 2px;
+
+    img,
+    picture {
+      width: 10px;
+      height: 7.37px;
+    }
+  }
+
+  &-text {
+    margin-right: 6px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #989CB3;
+  }
+
+  &-input {
+    margin-left: 4px;
+    margin-right: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+
+  &_active {
+    display: flex;
+  }
+}

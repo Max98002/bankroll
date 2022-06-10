@@ -1508,7 +1508,8 @@ input::placeholder {
 }
 .group-items {
   max-height: 0px;
-  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
   transition: all 0.2s;
 }
 
@@ -1583,4 +1584,54 @@ input::placeholder {
   pointer-events: none;
   background: #1B1D26;
   transition: all 0.2s;
+}
+
+.edit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px 24px;
+  background: #404453;
+  border: 2px solid #4461E0;
+}
+.edit-arrow {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+  transform: rotate(90deg);
+}
+.edit-enter {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 20px;
+  background: #292C38;
+  border-radius: 2px;
+}
+.edit-enter img,
+.edit-enter picture {
+  width: 10px;
+  height: 7.37px;
+}
+.edit-text {
+  margin-right: 6px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #989CB3;
+}
+.edit-input {
+  margin-left: 4px;
+  margin-right: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+.edit_active {
+  display: flex;
 }

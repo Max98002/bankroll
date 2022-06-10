@@ -66,7 +66,8 @@
 
   &-items {
     max-height: 0px;
-    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
     transition: all 0.2s;
   }
 }
