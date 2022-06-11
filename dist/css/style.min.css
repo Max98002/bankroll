@@ -1586,8 +1586,22 @@ input::placeholder {
   transition: all 0.2s;
 }
 
+.draggable::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 48px);
+  bottom: 0;
+  left: 50%;
+  border-bottom: 2px solid #4461E0;
+  transform: translateX(-50%);
+}
+.draggable-element {
+  opacity: 0.5;
+}
+
 .edit {
-  display: flex;
+  position: relative;
+  display: none;
   align-items: center;
   justify-content: flex-start;
   padding: 6px 24px;

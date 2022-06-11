@@ -12,7 +12,9 @@ export default class ProfileDropMenu {
         if (e.target) {
           e.preventDefault();
         }
-        btn.classList.toggle(this.active);
+        try {
+          btn.classList.toggle(this.active);
+        } catch {}
         this.menu.classList.toggle('show-menu');
       });
     })
