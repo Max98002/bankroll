@@ -1,6 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 
+import createLine from './modules/create-line.js';
 import ProfileDropMenu from "./modules/profile-drop-menu.js";
 import ItemsActive from './modules/items-active.js';
 import MoreMenuBtn from './modules/more-btn-menu.js';
@@ -10,6 +11,8 @@ import ShowEditBlock from './modules/show-edit-block.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   "use strict";
+
+  createLine();
 
   new ProfileDropMenu('.button-profile_user', '.normal-menu').init();
   new ProfileDropMenu('.button-profile_disconnected', '.disconnected-menu').init();

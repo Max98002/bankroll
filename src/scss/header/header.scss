@@ -8,7 +8,7 @@
 
   &-wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-right: 136px;
+    // margin-right: 136px;
   }
 
   &-date {
@@ -91,7 +91,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 22px;
-    margin-left: auto;
+    // margin-left: auto;
 
     &__wrapper {
       position: relative;
