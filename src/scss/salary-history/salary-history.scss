@@ -153,6 +153,13 @@
   }
 
   &__draggable {
+    .history-more-btn-menu {
+      left: -151px;
+    }
+    .history-more-btn-menu-change,
+    .history-more-btn-menu-group {
+      right: 97%;
+    }
   }
 }
 

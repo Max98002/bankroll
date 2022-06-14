@@ -3,7 +3,6 @@ flsFunctions.isWebp();
 
 import createLine from './modules/create-line.js';
 import ProfileDropMenu from "./modules/profile-drop-menu.js";
-import ItemsActive from './modules/items-active.js';
 import MoreMenuBtn from './modules/more-btn-menu.js';
 import Accordion from "./modules/accordion.js";
 import ChangeNameMoneyItem from "./modules/change-name-money-item.js";
@@ -20,8 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   
   new ProfileDropMenu('.currency-selection-header', '.currency-selection-drop-menu', 'currency-selection-header_active').init();
-  
-  new ItemsActive('.items-group-wrapper', 'items_active').init();
 
   new MoreMenuBtn('.more-btn').init();
 

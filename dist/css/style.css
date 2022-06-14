@@ -708,8 +708,6 @@ input::placeholder {
   place-items: center;
   width: 20px;
   height: 20px;
-  background-color: transparent;
-  z-index: 1;
 }
 .more-btn_active .more-btn-btn {
   background: #404453;
@@ -751,6 +749,7 @@ input::placeholder {
   background: #404453;
   box-shadow: 0px 10px 20px rgba(17, 20, 33, 0.3);
   border-radius: 6px;
+  z-index: 10;
 }
 .more-btn-menu__item {
   display: flex;
@@ -788,7 +787,6 @@ input::placeholder {
   border: 1px solid #12131A;
   box-shadow: 0px 10px 20px rgba(17, 20, 33, 0.3);
   border-radius: 6px;
-  z-index: 1;
 }
 .more-btn-menu-change__item {
   display: flex;
@@ -827,7 +825,6 @@ input::placeholder {
   border: 1px solid #12131A;
   box-shadow: 0px 10px 20px rgba(17, 20, 33, 0.3);
   border-radius: 6px;
-  z-index: 1;
 }
 .more-btn-menu-group__item {
   display: flex;
@@ -1104,6 +1101,7 @@ input::placeholder {
   min-height: 97px;
   padding-left: 24px;
   padding-right: 24px;
+  margin-bottom: 16px;
 }
 .money-item:hover {
   cursor: pointer;
@@ -1462,7 +1460,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 16px 24px;
+  padding: 8px 24px;
 }
 .group-elements:hover .group__name {
   cursor: pointer;
@@ -1509,6 +1507,7 @@ input::placeholder {
   left: 3px;
   transform: translateY(-50%) scale(0);
   transition: all 0.2s;
+  z-index: 10;
 }
 .group-items {
   max-height: 0px;
@@ -1578,6 +1577,7 @@ input::placeholder {
   left: 3px;
   transform: translateY(-50%) scale(0);
   transition: all 0.2s;
+  z-index: 10;
 }
 .item__plus {
   position: absolute;
@@ -1782,6 +1782,14 @@ input::placeholder {
   font-feature-settings: "pnum" on, "lnum" on;
   color: #FFFFFF;
 }
+.history__draggable .history-more-btn-menu {
+  left: -151px;
+}
+.history__draggable .history-more-btn-menu-change,
+.history__draggable .history-more-btn-menu-group {
+  right: 97%;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
