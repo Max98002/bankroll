@@ -1382,12 +1382,14 @@ input::placeholder {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  pointer-events: none;
 }
 .currency-selection-header__icon {
   width: 20px;
   height: 20px;
   display: grid;
   place-items: center;
+  pointer-events: none;
 }
 .currency-selection-header__icon svg path {
   transition: fill 0.2s;
