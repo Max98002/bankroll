@@ -1,32 +1,55 @@
-export default class ProfileDropMenu {
-  constructor(tiggersBtns, triggerMenu, activeClass = '') {
-    this.menu = document.querySelector(triggerMenu);
-    this.btns = document.querySelectorAll(tiggersBtns);
-    this.active = activeClass;
-    this.selectorMenu = triggerMenu;
-  }
+const profileDropMenu = () => {
+  const btns = document.querySelectorAll('.button-profile');
+  let intervalId;
 
-  showMenu() {
-    this.btns.forEach(btn => {
+  btns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const dataBtn = e.currentTarget.getAttribute('data-path');
+      const menu = document.querySelector(`[data-target=${dataBtn}]`);
 
-      btn.addEventListener('click', (e) => {
-        const target = e.target;
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].nextElementSibling.classList.remove('profile-drop-block_active');
+        intervalId = setTimeout(() => {
+          btns[i].classList.remove('open');
+        }, 0);
+      }
 
-        if (target) {
-          e.preventDefault();
+      if (!btn.classList.contains('open')) {
+        menu.classList.add('profile-drop-block_active');
+
+        intervalId = setTimeout(() => {
+          btn.classList.add('open');
+        }, 0);
+      }
+
+      if (btn.classList.contains('open')) {
+        clearTimeout(intervalId);
+
+        menu.classList.remove('selected-blocks-list_active');
+
+        intervalId = setTimeout(() => {
+          btn.classList.remove('open');
+        }, 0);
+      }
+    })
+
+    
+  });
+
+  window.addEventListener('click', (e) => {
+    const target = e.target;
+
+    for(let i = 0; i < btns.length; i++) {
+      if (target && !target.matches('.profile-drop-block') && btns[i].classList.contains('open') && !target.closest("div[data-target]")) {
+        for (let i = 0; i < btns.length; i++) {
+          btns[i].nextElementSibling.classList.remove('profile-drop-block_active');
+          intervalId = setTimeout(() => {
+            btns[i].classList.remove('open');
+          }, 0);
         }
-
-        try {
-          btn.classList.toggle(this.active);
-        } catch {}
-
-        this.menu.classList.toggle('show-menu');
-      });
-
-    });
-  }
-
-  init() {
-    this.showMenu();
-  }
+      }
+    }
+  });
 }
+
+export default profileDropMenu;

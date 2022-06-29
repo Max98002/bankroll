@@ -22,6 +22,7 @@
       height: 24px;
       border-radius: 100%;
       margin-right: auto;
+      pointer-events: none;
 
       img,
       picture {
@@ -44,6 +45,7 @@
       line-height: 19px;
       text-align: right;
       color: #E5E5E5;
+      pointer-events: none;
     }
   }
 
