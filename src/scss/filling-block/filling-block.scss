@@ -1,13 +1,17 @@
 .filling {
   position: absolute;
-  top: 50%;
+  top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 12;
 
   &-header {
+    position: relative;
     display: flex;
     align-items: center;
     width: 600px;
+
+    z-index: 1;
 
     &__btn {
       transition: background-color 0.2s;
@@ -34,12 +38,14 @@
   &-bottom {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 
     position: absolute;
     top: 32px;
     left: 0;
 
-    width: 600px;
+    width: 650px;
     height: 56px;
 
     padding: 8px 0px;
@@ -70,6 +76,11 @@
   }
 
   &-set-numbers {
+    position: relative;
+    max-width: 290px;
+    padding-right: 18px;
+    flex-shrink: 0;
+
     &-input {
       &_not-focus {
         width: 55px;
@@ -77,9 +88,23 @@
         padding-right: 10px;
       }
     }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: #505465;
+      transform: translateY(-50%);
+    }
   }
 
   &-set-words {
+    position: relative;
+    width: 100%;
     padding-left: 18px;
 
     &-input {
@@ -93,7 +118,7 @@
 
   &-categories {
     position: absolute;
-    top: 61px;
+    top: 50px;
     left: 0;
     display: flex; //flex
     flex-flow: column nowrap;
@@ -129,6 +154,7 @@
         padding: 12px 0;
         padding-left: 17px;
         padding-right: 26px;
+
         &:not(:last-child) {
           margin-bottom: 4px;
         }
@@ -139,6 +165,7 @@
 
         &_active {
           background: #595D6D;
+
           .filling-categories-items__tagCatagori {
             opacity: 1;
             visibility: visible;
@@ -163,7 +190,21 @@
       }
     }
   }
+
   &_hidden {
     display: none;
+  }
+  &-overlay {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 139px;
+    background: linear-gradient(180deg, #12131A 0%, rgba(18, 19, 26, 0.85) 67.64%, rgba(18, 19, 26, 0) 100%);
+    z-index: 11;
+    &_show {
+      display: block;
+    }
   }
 }

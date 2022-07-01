@@ -1,7 +1,12 @@
 @import 'fonts';
 @import 'bootstrap-reboot';
 
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
 body {
+	position: relative;
 	font-family: 'Manrope';
 	font-style: normal;
 	font-weight: 500;

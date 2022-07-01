@@ -493,7 +493,12 @@ progress {
 }
 
 /*# sourceMappingURL=bootstrap-reboot.min.css.map */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 body {
+  position: relative;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 500;
@@ -1228,14 +1233,17 @@ input::placeholder {
 
 .filling {
   position: absolute;
-  top: 50%;
+  top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 12;
 }
 .filling-header {
+  position: relative;
   display: flex;
   align-items: center;
   width: 600px;
+  z-index: 1;
 }
 .filling-header__btn {
   transition: background-color 0.2s;
@@ -1255,10 +1263,12 @@ input::placeholder {
 .filling-bottom {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 32px;
   left: 0;
-  width: 600px;
+  width: 650px;
   height: 56px;
   padding: 8px 0px;
   background: #404453;
@@ -1280,12 +1290,31 @@ input::placeholder {
   height: 32px;
   background-color: inherit;
 }
+.filling-set-numbers {
+  position: relative;
+  max-width: 290px;
+  padding-right: 18px;
+  flex-shrink: 0;
+}
 .filling-set-numbers-input_not-focus {
   width: 55px;
   border-right: 1px solid #505465;
   padding-right: 10px;
 }
+.filling-set-numbers::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: #505465;
+  transform: translateY(-50%);
+}
 .filling-set-words {
+  position: relative;
+  width: 100%;
   padding-left: 18px;
 }
 .filling-set-words-input_not-focus {
@@ -1295,7 +1324,7 @@ input::placeholder {
 }
 .filling-categories {
   position: absolute;
-  top: 61px;
+  top: 50px;
   left: 0;
   display: flex;
   flex-flow: column nowrap;
@@ -1360,6 +1389,19 @@ input::placeholder {
 }
 .filling_hidden {
   display: none;
+}
+.filling-overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 139px;
+  background: linear-gradient(180deg, #12131A 0%, rgba(18, 19, 26, 0.85) 67.64%, rgba(18, 19, 26, 0) 100%);
+  z-index: 11;
+}
+.filling-overlay_show {
+  display: block;
 }
 
 .currency-selection {
@@ -1808,4 +1850,40 @@ input::placeholder {
   animation-fill-mode: forwards;
   visibility: visible;
   pointer-events: auto;
+}
+
+.empty {
+  padding: 0 24px;
+}
+.empty-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 12px;
+  background: #1E202B;
+  border: 1px dashed #4B4E61;
+  border-radius: 6px;
+}
+.empty-wrapper:is(:hover) {
+  cursor: pointer;
+}
+.empty-icon {
+  margin-right: 9px;
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+.empty-text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #7B7F96;
+}
+
+.empty-drag {
+  background: #181F3A;
+  border-color: #4461E0;
 }
