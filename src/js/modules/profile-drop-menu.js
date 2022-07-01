@@ -9,10 +9,7 @@ export default class ProfileDropMenu {
   init() {
     this.btns.forEach(btn => {
       btn.addEventListener('click', (e) => {
-        const dataBtn = e.currentTarget.getAttribute('data-path');
-        const menu = document.querySelector(`[data-target=${dataBtn}]`);
-
-        console.log(dataBtn, menu);
+        const menu = e.currentTarget.nextElementSibling;
 
         for (let i = 0; i < this.btns.length; i++) {
           this.btns[i].nextElementSibling.classList.remove(this.active);
